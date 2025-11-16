@@ -1,9 +1,0 @@
-:root {
-  --primary-color: #ff0000; /* red */
-  --text-on-primary: #fff;
-}
-
-body {
-  background-color: var(--primary-color);
-  color: var(--text-on-primary);
-}
