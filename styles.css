@@ -1,8 +1,9 @@
 :root {
-  --primary-color: #ff66cc; /* pink */
+  --primary-color: #ffd700; /* yellow (gold) */
+  --text-on-primary: #111;
 }
 
 body {
   background-color: var(--primary-color);
-  color: #111;
+  color: var(--text-on-primary);
 }
