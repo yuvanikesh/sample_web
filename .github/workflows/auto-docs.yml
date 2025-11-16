@@ -1,28 +1,23 @@
-name: Auto Docs Agent
+name: Auto Documentation Update
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
+    branches:
+      - main
 
 jobs:
   auto-docs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Run Auto Docs Agent
         uses: vjCodeMaze/auto-docs-agent@v1
         with:
-          llm_api_key: ${{ secrets.LLM_API_KEY }}
-          llm_model: "gpt-4o-mini"
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Auto-update documentation"
-          title: "📘 Auto-update documentation"
+          base-branch: main
+          docs-path: docs
+          llm-model: gpt-4o-mini
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
