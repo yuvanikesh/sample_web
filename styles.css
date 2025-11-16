@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #ffd700; /* yellow (gold) */
-  --text-on-primary: #111;
+  --primary-color: #ff0000; /* red */
+  --text-on-primary: #fff;
 }
 
 body {
