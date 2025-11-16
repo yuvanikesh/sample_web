@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+:root { --accent: #ff66cc; }
+.app { background: var(--accent); }
+
+<!-- add class to body or root -->
+<body class="bg-pink-400 text-white">
+  ...
+</body>

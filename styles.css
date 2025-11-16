@@ -1,0 +1,8 @@
+:root {
+  --primary-color: #ff66cc; /* pink */
+}
+
+body {
+  background-color: var(--primary-color);
+  color: #111;
+}
